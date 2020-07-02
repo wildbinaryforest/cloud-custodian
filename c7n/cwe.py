@@ -81,6 +81,10 @@ class CloudWatchEvents:
             'source': 'lambda.amazonaws.com',
             'ids': 'requestParameters.functionName'},
 
+        'StartInstances': {
+            'ids': 'responseElements.instancesSet.items[].instanceId',
+            'source': 'ec2.amazonaws.com'},    
+
         'RunInstances': {
             'ids': 'responseElements.instancesSet.items[].instanceId',
             'source': 'ec2.amazonaws.com'}}
